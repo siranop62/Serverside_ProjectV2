@@ -1,22 +1,22 @@
 <template>
     <div>
-        <h2> Get all blogs </h2>
+        <h2> Get all Order </h2><hr>
 
         <!-- <p><button v-on:click="logout"> Logout </button></p> -->
 
-        <h4> จำนวนblog {{blogs.length}}</h4>
-        <p><button v-on:click="navigateTo('/blog/create')"> สร้างblog </button></p>
+        <h4> จำนวนOrder {{blogs.length}}</h4>
+        <p><b-button variant="success" v-on:click="navigateTo('/blog/create')"> OrderTree </b-button></p>
         <div v-for="blog in blogs" v-bind:key="blog.id">
-            <p>id: {{ blog.id }} </p>
-            <p>title: {{ blog.title }} </p>
-            <p>content: {{ blog.content }} </p>
-            <p>category: {{ blog.category }} </p>
-            <p>status: {{ blog.status }} </p>
-            <p>
-                <button v-on:click="navigateTo('/blog/'+ blog.id)"> ดูblog </button>
-                <button v-on:click="navigateTo('/blog/edit/'+ blog.id)"> แก้ไขblog </button>
-                <button v-on:click="deleteBlog(blog)"> ลบข้อมูล </button>
-            </p>
+            <p>id : {{ blog.id }} </p>
+            <p>Title : {{ blog.title }} </p>
+            <p>Order and address details : {{ blog.content }} </p>
+            <p>Category : {{ blog.category }} </p>
+            <p>Status : {{ blog.status }} </p>
+            <b-button-group>
+                <b-button v-on:click="navigateTo('/blog/'+ blog.id)"> ดูOrder </b-button>
+                <b-button v-on:click="navigateTo('/blog/edit/'+ blog.id)"> แก้ไขOrder </b-button>
+                <b-button v-on:click="deleteBlog(blog)"> ลบข้อมูล </b-button>
+            </b-button-group>
             <hr>
         </div>
     </div>

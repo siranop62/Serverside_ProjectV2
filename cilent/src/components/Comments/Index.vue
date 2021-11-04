@@ -1,59 +1,56 @@
 <template>
-    <div>
-        <h2>Get all comments</h2>
-        <!-- <p><button v-on:click="logout">Logout</button></p> -->
-        <h4>จำนวน comment {{comments.length}}</h4>
-        <div v-for="comment in comments" v-bind:key="comment.id">
-            <p>id : {{ comment.id }}</p>
-            <p>blog id : {{ comment.blogId }}</p>
-            <p>comment : {{ comment.comment }}</p>
-            <p>
-                <button v-on:click="navigateTo('/comment/'+ comment.id)">ดู comment</button>
-                <button v-on:click="deleteComment(comment)">ลบข้อมูล</button>
-            </p>
-            <hr />
+    <div class="product">
+        <h2>All Product</h2><hr>
+        <div class="welcome-text">
+                <center><img src="@/assets/1.jpg"></center>
+                <h2>ลิ้นมังกร</h2>
+                <h5>เป็นต้นไม้ที่สามารถนำไปปลูกในสวนได้เพื่อใช้ประโยชน์หลากหลายวัตถุประสงค์ เหมาะทั้งปลูกเป็นไม้กระถางหรือลงแปลงประดับสวน ถือว่าเป็นต้นไม้ที่ทนมาก เหมาะกับคนที่พึ่งเริ่มต้นปลูกต้นไม้ สามารถอยู่ในบริเวณที่รำไรถึงครึ่งวันได้ นิยมปลูกในสวนกรวดและสวนหิน สามารถประดับในอาคารได้ดีและปลูกกลางแจ้งในพื้นที่แห้งแล้วได้เช่นกัน รวมถึงปลูกบริเวณที่มีพื้นที่จำกัดได้เช่นฉากหรือมุมอาคาร </h5>
+        <hr />
+                <center><img src="@/assets/2.jpg"></center>
+                <h2>พลูฉีก/มอนสเตอร่า</h2>
+                <h5>ไม้เลื้อยทอดยาวไปตามพื้นหรือหลักพยุงต้น ก้านใบยาว ใบเป็นรูปหัวใจ มีลักษณะเป็นแฉกฉลุลงบนพื้นใบ บางชนิดจะมีขอบใบหยักเป็นแฉกหรือลักษณะใบมีรูปร่างแปลกตา ส่วนมากมักมีสีเขียวสด และขอบใบจะค่อยๆใหญ่ขึ้นตามอายุของต้น นิยมปลูกเป็นไม้กระถางเลื้อยขึ้นหลัก เลี้ยงง่ายและทนทาน สามารถปลูกในอาคารได้ ชอบแสงแดดรำไร ควรปลูกในเครื่องปลูกที่โปร่งและระบายน้ำดี รดน้ำให้มีความชื้นปานกลาง </h5>
+        <hr />
+                <center><img src="@/assets/3.jpg"></center>
+                <h2>บัวบกโขด</h2>
+                <h5>เป็นต้นไม้กระถาง อยู่ในกลุ่มไม้อวบน้ำ เป็นไม้โขดที่เติบโตได้ดีในป่า จัดเป็นพืชล้มลุกที่มีหัวอยู่ใต้ดิน มีหัวหรือรากขนาดใหญ่ไว้สะสมน้ำและสารอาหาร ยิ่งอายุเยอะหัวยิ่งใหญ่และออกก้านใบได้ง่าย ถ้าอยากให้ต้นยาวเลื้อย ให้วางในพื้นที่แสงรำไร เพราะเมื่อแตกกิ่งก้านออกมาแล้ว ตัวก้านจะยืดตัวหาแสง ทำให้ได้ก้านยาว แต่ถ้าชอบแบบก้านสั้นๆ ใบเยอะๆ ก็ให้วางไว้ในที่แสงเต็มวัน ต้นก็จะแตกใบกลมๆ ให้ได้ชมอยู่เสมอ </h5>
+        <hr />
         </div>
     </div>
 </template>
 <script>
-import CommentsService from '@/services/CommentsService'
 
 export default {
 data () {
-    return {
-        comments: []
-    }
-},
-async created () {
-    this.comments = (await CommentsService.index()).data
+    
 },
 methods: {
-    logout () {
-        this.$store.dispatch('setToken', null)
-        this.$store.dispatch('setComment', null)
-        this.$router.push({
-            name: 'login'
-        })
-    },
     navigateTo (route) {
         this.$router.push(route)
     },
-    async deleteComment (comment) {
-        let result = confirm("Want to delete?")
-        if (result) {
-            try {
-                await CommentsService.delete(comment)
-                this.refreshData()
-            } catch (err) {
-                console.log(err)
-            }
-        }
-    },
-    async refreshData() {
-        this.comments = (await CommentsService.index()).data
-    }
 }
 }
 </script>
 <style scoped>
+    img {
+        width: 500px;
+        height: 500px;
+    }
+
+    .welcome-text {
+	position: relative;
+	z-index: 4;
+    }
+    
+	h2 {
+		font-size: 30px;
+		font-family: 'robotobold';
+		color: rgb(117, 117, 117);
+		margin-bottom: 30px;
+	}
+
+	h5 {
+		font-size: 22px;
+		color: rgb(117, 117, 117);
+	}
+
 </style>

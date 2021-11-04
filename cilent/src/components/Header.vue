@@ -5,7 +5,7 @@
         <b-navbar-nav>
           <b-nav-item router-link :to="{ name: 'home' }">Home</b-nav-item>
           <b-nav-item router-link :to="{ name: 'comments' }"> Comments </b-nav-item>
-          <b-nav-item router-link :to="{ name: 'blogs' }"> Blogs </b-nav-item>
+          <b-nav-item router-link :to="{ name: 'blogs' }"> Order </b-nav-item>
           <b-nav-item-dropdown text="User" right >
             <b-dropdown-item router-link :to="{ name: 'users' }"> Users </b-dropdown-item>
             <b-dropdown-item router-link :to="{ name: 'login' }"> Login </b-dropdown-item>

@@ -5,12 +5,17 @@
         <p>ชื่อ - นามสกุล {{user.name}} - {{user.lastname}}</p>
         <p>Email : {{user.email}} </p>
         <p>Password : {{user.password}}</p>
+        <b-button-group><p>
+                <b-button v-on:click="navigateTo('/users')"> กลับ </b-button>
+        </p></b-button-group>
     </div>
 </template>
 <script>
 import UsersService from '@/services/UsersService'
 export default {
+    
     data() {
+        
         return {
             user: null,
         };
@@ -23,7 +28,13 @@ export default {
             console.log(error);
         }
     },
+    methods:{
+        navigateTo(route){
+            this.$router.push(route)
+        },
+    },
 };
+
 </script>
 <style scoped>
 </style>

@@ -1,15 +1,15 @@
 <template>
-    <div>
-        <h1> Show Blog </h1>
-            <p>id: {{ blog.id }} </p>
-            <p>title: {{ blog.title }} </p>
-            <p>content: {{ blog.content }} </p>
-            <p>category: {{ blog.category }} </p>
-            <p>status: {{ blog.status }} </p>
-            <p>
-                <button v-on:click="navigateTo('/blog/edit/'+blog.id)"> แก้ไขblog </button>
-                <button v-on:click="navigateTo('/blogs')"> กลับ </button>
-            </p>
+    <div><hr>
+        <h1> Show Order </h1>
+            <p>id : {{ blog.id }} </p>
+            <p>Title : {{ blog.title }} </p>
+            <p>Order and address details : {{ blog.content }} </p>
+            <p>Category : {{ blog.category }} </p>
+            <p>Status : {{ blog.status }} </p>
+            <p><b-button-group>
+                <b-button variant="success" v-on:click="navigateTo('/blog/edit/'+blog.id)"> แก้ไขOrder </b-button>
+                <b-button variant="dark" v-on:click="navigateTo('/blogs')"> กลับ </b-button>
+            </b-button-group></p>
     </div>
 </template>
 <script>
