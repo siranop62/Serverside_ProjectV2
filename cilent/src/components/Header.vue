@@ -4,7 +4,6 @@
       <b-navbar type="dark" variant="dark">
         <b-navbar-nav>
           <b-nav-item router-link :to="{ name: 'home' }">Home</b-nav-item>
-          <b-nav-item router-link :to="{ name: 'comments' }"> Comments </b-nav-item>
           <b-nav-item router-link :to="{ name: 'blogs' }"> Order </b-nav-item>
           <b-nav-item-dropdown text="User" right >
             <b-dropdown-item router-link :to="{ name: 'users' }"> Users </b-dropdown-item>
