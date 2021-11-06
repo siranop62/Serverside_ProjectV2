@@ -4,18 +4,16 @@
             <div class="banner-overlay"></div>
             <div class="welcome-text">
                 <h2>Bank | "Tree PreOrders"</h2>
-                <h5>We are professional in cleaning services for more than 27 years, committed to developing a strong team and skilled in working in all areas. To enhance the ability to complete cleaning tasks meet the variety and meet the needs of the building Customer locations in all business segments And we believe that a good and motivated team Will be able to deliver quality work with service heart To give you experience in service and the best quality from our professional team
+                <h5>you can’t buy happiness but you can buy plants and that’s the same thing
                     <hr>
                     <br>
-                    - Meet the needs of customers To provide efficient and fast service
+                    - ซื้อความสุขไม่ได้
                     <br>
-                    - 24 hour cleaning service
+                    - แต่ซื้อต้นไม้ได้นะ 😉
                     <br>
-                    - The company has been certified ISO 9001-2015 according to international quality standards.
+                    - ส่งจันทร์/พุธ
                     <br>
-                    - Use technology and innovation in work processes
-                    <br>
-                    - Use non-toxic and chemical free biological agents in cleaning work to provide health and safety in life. and customer property.</h5>
+                    - ตอบข้อความ 24 ชั่วโมง </h5>
             </div>
         </div>
     </div>
